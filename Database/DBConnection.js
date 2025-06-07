@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 
 // Replace this with your actual MongoDB URI from Railway
-const mongoURI = "mongodb+srv://rajeevranjan7654321:GPFAyX9amOfLKj7B@bulkwala.hnjlycy.mongodb.net/?retryWrites=true&w=majority&appName=Bulkwala";
+
 
 
 
 const connectDB = async()=>{
 
     try {
-        const conn = await mongoose.connect(mongoURI,{
+        const conn = await mongoose.connect(process.env.MONGO_URI,{
         
              }
         )
