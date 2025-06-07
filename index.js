@@ -5,6 +5,7 @@ const connectDB = require('./Database/DBConnection.js');
 const UserRoutes =  require('./Router/UserRoutes.js');
 const cors = require('cors');
 const categoryRoutes = require('./Router/categoryRoutes.js');
+require('dotenv').config();
 
 
 
@@ -25,7 +26,7 @@ app.get('/', (req, res) => {
   res.send('Hello from Express!');
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

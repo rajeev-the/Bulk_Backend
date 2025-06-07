@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config();
 
 // Replace this with your actual MongoDB URI from Railway
 
@@ -10,8 +10,7 @@ const connectDB = async()=>{
 
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI,
-            { useNewUrlParser: true, useUnifiedTopology: true }
-        
+         
              
         )
         console.log(`connection  to mongoose Database ${conn.connection.host}`)
