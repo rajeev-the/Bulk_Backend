@@ -50,7 +50,7 @@ const getAllCategories = async (req, res) => {
 }
 
 const subcategoriesCreate = async (req, res) => {
-    const { name, slug, img_url, categoryId } = req.body;
+    const { name, slug, img_url, categoryId ,price ,sample_price } = req.body;
     try {
         // Validate required fields
         if (!name || !slug || !img_url || !categoryId) {
@@ -68,7 +68,10 @@ const subcategoriesCreate = async (req, res) => {
             name,
             slug,
             img_url,
-            category: categoryId
+            category: categoryId,
+            sample_price:sample_price,
+            price:price
+
         });
 
         await newSubcategory.save();
