@@ -17,6 +17,10 @@ const subcategorySchema = new mongoose.Schema({
     price:{
         type:String,
         required: true,
+    },
+    sample_price:{
+        type:Number,
+        require:true
     }
 })
 const subcategories = mongoose.model('Subcategory', subcategorySchema);
